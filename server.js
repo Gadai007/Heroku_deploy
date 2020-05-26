@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const POST = process.env.POST || 2121
+const PORT = process.env.PORT || 2121
 
 app.set('view engine', 'hbs')
 app.use(express.json())
@@ -22,6 +22,6 @@ app.post('/', (req, res) => {
     res.redirect('/')
 })
 
-app.listen(POST, () => {
-    console.log('server started on http://localhost:2121')
+app.listen(PORT, () => {
+    console.log(`server started on http://localhost:${PORT}`)
 })
